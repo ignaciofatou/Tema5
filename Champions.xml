@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CHAMPIONS>
+   <FINAL>
+      <PARTIDO>
+         <EQUIPO>Real Madrid</EQUIPO>
+         <EQUIPO>Villareal</EQUIPO>
+      </PARTIDO>
+   </FINAL>
+   <SEMIFINAL>
+      <PARTIDO>
+         <EQUIPO>Real Madrid</EQUIPO>
+         <EQUIPO>Barcelona</EQUIPO>
+      </PARTIDO>
+      <PARTIDO>
+         <EQUIPO>Villareal</EQUIPO>
+         <EQUIPO>Cádiz</EQUIPO>
+      </PARTIDO>
+   </SEMIFINAL>
+</CHAMPIONS>
