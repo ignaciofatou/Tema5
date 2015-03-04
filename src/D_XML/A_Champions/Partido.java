@@ -25,23 +25,22 @@ public class Partido {
         equipo2 = p_Equipo2;
     }
     
-    public Element getPartidoXML(Document documento, Element elementoRaiz){
+    public Element getPartidoXML(Document documento){
 
         //Creamos el Elemento PARTIDO
         Element elementoPatido = documento.createElement("PARTIDO");
-        elementoRaiz.appendChild(elementoPatido);
 
-        //Crear un elemento EQUIPO 1 colgando de PARTIDO
+        //Crear un elemento EQUIPO 1
         Element elementoEquipo1 = documento.createElement("EQUIPO");
-        elementoPatido.appendChild(elementoEquipo1);        
-        Text textoEquipo1 = documento.createTextNode(equipo1);
-        elementoEquipo1.appendChild(textoEquipo1);
-
-        //Crear un elemento EQUIPO 2 colgando de PARTIDO
+        elementoEquipo1.setTextContent(equipo1);
+        
+        //Crear un elemento EQUIPO 2
         Element elementoEquipo2 = documento.createElement("EQUIPO");
+        elementoEquipo2.setTextContent(equipo2);
+        
+        //Colgar los equipos en la etiqueta PARTIDO
+        elementoPatido.appendChild(elementoEquipo1);
         elementoPatido.appendChild(elementoEquipo2);
-        Text textoEquipo2 = documento.createTextNode(equipo2);
-        elementoEquipo2.appendChild(textoEquipo2);
 
         //Retornamos el Element
         return elementoPatido;

@@ -2,18 +2,18 @@
 <CHAMPIONS>
    <FINAL>
       <PARTIDO>
-         <EQUIPO>Real Madrid</EQUIPO>
+         <EQUIPO>Madrid</EQUIPO>
          <EQUIPO>Villareal</EQUIPO>
       </PARTIDO>
    </FINAL>
    <SEMIFINAL>
       <PARTIDO>
-         <EQUIPO>Real Madrid</EQUIPO>
+         <EQUIPO>Madrid</EQUIPO>
          <EQUIPO>Barcelona</EQUIPO>
       </PARTIDO>
       <PARTIDO>
          <EQUIPO>Villareal</EQUIPO>
-         <EQUIPO>Cádiz</EQUIPO>
+         <EQUIPO>Sevilla</EQUIPO>
       </PARTIDO>
    </SEMIFINAL>
 </CHAMPIONS>

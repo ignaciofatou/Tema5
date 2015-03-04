@@ -263,32 +263,27 @@ public class VentanaChampion extends javax.swing.JFrame {
             DocumentBuilder creadorDocumento = fábricaCreadorDocumento.newDocumentBuilder();
             //Crear un nuevo documento XML
             Document documento = creadorDocumento.newDocument();
-            
+
+
             //Crear el nodo raíz y colgarlo del documento
             Element elementoChampions = documento.createElement("CHAMPIONS");
             documento.appendChild(elementoChampions);
 
-
-            //Crear un elemento FINAL colgando de CHAMPIONS
+            //Crear un elemento FINAL y metemos el elemento PARTIDO
             Element elementoFinal = documento.createElement("FINAL");
-            elementoChampions.appendChild(elementoFinal);            
-            //Metemos el Contenido de los Partidos de la Final
-            finalisima.getPartidoXML(documento, elementoFinal);
+            elementoFinal.appendChild(finalisima.getPartidoXML(documento));
+            //El elemento FINAL lo colgamos del elemento principal CHAMPION
+            elementoChampions.appendChild(elementoFinal);
 
-
-            //Crear un elemento SEMIFINAL colgando de CHAMPIONS
+            //Crear un elemento SEMIFINAL y metemos los elementos PARTIDOS
             Element elementoSemifinal = documento.createElement("SEMIFINAL");
+            elementoSemifinal.appendChild(semifinal1.getPartidoXML(documento));
+            elementoSemifinal.appendChild(semifinal2.getPartidoXML(documento));
+            //El elemento SEMIFINAL lo colgamos del elemento principal CHAMPION
             elementoChampions.appendChild(elementoSemifinal);
-            
-            //Metemos el Contenido de los Partidos de la Semifinal 1
-            elementoSemifinal.appendChild(semifinal1.getPartidoXML(documento, elementoSemifinal));
-            
-            //Metemos el Contenido de los Partidos de la Semifinal 2
-            elementoSemifinal.appendChild(semifinal2.getPartidoXML(documento, elementoSemifinal));
-            
-            
-            
-            //Chorradas para guardar el fichero
+ 
+
+            //Churrro para poder generar el fichero XML
             //Generar el tranformador para obtener el documento XML en un fichero
             TransformerFactory fabricaTransformador = TransformerFactory.newInstance();
             Transformer transformador = fabricaTransformador.newTransformer();
